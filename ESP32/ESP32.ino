@@ -1,32 +1,18 @@
+#include "MySettings.h"
+#include "MyOTA.h"
 #include "MyOLED.h"
+
+long last = 0;
 
 void setup() {
 	Serial.begin(115200);
+	Serial.println("==> START <==");
 	Serial.println();
-	Serial.println();
-	
-	MyOLED.init();
-	randomSeed(millis());
-}
 
-long last = 0;
-void BlinkWifi()
-{
-	if (millis() - last > 500)
-	{
-		MyOLED.SwitchWifi();
-		MyOLED.SwitchCloud();
-		MyOLED.SwitchRefresh();
-		last = millis();
-	}
+	MySettings.init();
+	MyOTA.init();
 }
 
 void loop() {
-	MyOLED.loop();
-	if (millis() - last > 1300)
-	{
-		MyOLED.Print((random(6000) - 3000) / 100.0);
-		last = millis();
-	}
-	yield();
+	MyOTA.loop();
 }

@@ -1,24 +1,14 @@
-#include <WiFi.h>
-#include <ESPmDNS.h>
-#include <WiFiUdp.h>
-#include <ArduinoOTA.h>
+// 
+// 
+// 
 
-const char* ssid = "...";
-const char* password = "...";
-bool OTA = false;
+#include "MyOTA.h"
 
-String GetMacAddr()
+void MyOTAClass::init()
 {
-	uint64_t chipid = ESP.getEfuseMac();//The chip ID is essentially its MAC address(length: 6 bytes).
-	char mac[12];
-	sprintf(mac, "%04X%08X", (uint16_t)(chipid >> 32), (uint32_t)chipid);
-	return String(mac);
-}
+	const char* ssid = "...";
+	const char* password = "...";
 
-void setup() {
-	pinMode(0, INPUT_PULLUP);
-
-	Serial.begin(115200);
 	Serial.println("Booting");
 	WiFi.mode(WIFI_STA);
 	WiFi.begin(ssid, password);
@@ -71,21 +61,29 @@ void setup() {
 	Serial.println(WiFi.localIP());
 
 	uint8_t pinState = digitalRead(0);
+	Enabled = check();
 
-	if (pinState == 0)
+	if (Enabled)
 	{
-		OTA = true;
-		Serial.println("OTA true");
-		uint64_t chipid;
-		chipid = ESP.getEfuseMac();//The chip ID is essentially its MAC address(length: 6 bytes).
-		
-		Serial.printf("ESP32 Chip ID = %04X", (uint16_t)(chipid >> 32));//print High 2 bytes
-		Serial.printf("%08X\n", (uint32_t)chipid);//print Low 4bytes.
-		Serial.println(GetMacAddr());
+		Serial.println(">>> OTA Enabled true");
+	}
+	else 
+	{
+		Serial.println(">>> OTA Enabled false");
 	}
 }
 
-void loop() {
-	if (OTA)
+void MyOTAClass::loop()
+{
+	if (Enabled)
 		ArduinoOTA.handle();
 }
+
+bool MyOTAClass::check()
+{
+	return false;
+}
+
+
+MyOTAClass MyOTA;
+

@@ -22,7 +22,7 @@ char* Convert(const char* source)
 }
 
 bool loadConfig() {
-	File configFile = SPIFFS.open("/data.json", "r");
+	File configFile = SPIFFS.open("/config.json", "r");
 	if (!configFile) {
 		Serial.println("Failed to open config file");
 		return false;
@@ -83,7 +83,7 @@ bool saveConfig() {
 	json["ssid"] = "api.example.com";
 	json["password"] = "128du9as8du12eoue8da98h123ueh9h98";
 
-	File configFile = SPIFFS.open("/data.json", "w");
+	File configFile = SPIFFS.open("/config.json", "w");
 	if (!configFile) {
 		Serial.println("Failed to open config file for writing");
 		return false;
