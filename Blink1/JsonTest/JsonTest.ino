@@ -51,14 +51,14 @@ bool loadConfig() {
 	}
 
 	const char* serverName = json["ssid"];
-	const char* accessToken = json["password"];
+	const char* accessToken = json["pass"];
 
 	char buff[100];
 	strcpy(buff, (const char*)json["ssid"]);
 	ssid = buff;
 	ssid = Convert(json["ssid"]);
 
-	pass = Convert(json["password"]);
+	pass = Convert(json["pass"]);
 
 	// Real world application would store these values in some variables for
 	// later use.
@@ -80,8 +80,8 @@ bool loadConfig() {
 bool saveConfig() {
 	StaticJsonBuffer<200> jsonBuffer;
 	JsonObject& json = jsonBuffer.createObject();
-	json["ssid"] = "api.example.com";
-	json["password"] = "128du9as8du12eoue8da98h123ueh9h98";
+	json["ssid"] = "FunBox2-F197";
+	json["pass"] = "E13FE673E25A52323F4EC1444A";
 
 	File configFile = SPIFFS.open("/config.json", "w");
 	if (!configFile) {

@@ -16,12 +16,14 @@
 class MySettingsClass : public Base
 {
  protected:
-
+	 bool saveConfig();
 
  public:
 	void init();
 	void loop();
 	bool check();
+
+	String GetByHeader(String header);
 };
 
 extern MySettingsClass MySettings;

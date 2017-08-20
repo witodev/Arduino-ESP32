@@ -10,6 +10,7 @@
 #endif
 
 #include "Base.h"
+#include "MySettings.h"
 
 #include <WiFi.h>
 #include <ESPmDNS.h>

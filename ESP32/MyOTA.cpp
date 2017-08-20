@@ -6,8 +6,8 @@
 
 void MyOTAClass::init()
 {
-	const char* ssid = "...";
-	const char* password = "...";
+	auto ssid = MySettings.GetByHeader("ssid");
+	auto password = MySettings.GetByHeader("pass");
 
 	Serial.println("Booting");
 	WiFi.mode(WIFI_STA);
