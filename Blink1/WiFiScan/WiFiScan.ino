@@ -5,6 +5,21 @@
 */
 #include "WiFi.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+	uint8_t temprature_sens_read();
+	//uint8_t g_phyFuns;
+
+#ifdef __cplusplus
+}
+#endif
+
+WiFiClient client;
+uint8_t temp_farenheit;
+float temp_celsius;
+
 void setup()
 {
 	Serial.begin(115200);
@@ -19,6 +34,7 @@ void setup()
 
 void loop()
 {
+
 	Serial.println("scan start");
 
 	// WiFi.scanNetworks will return the number of networks found
@@ -43,6 +59,14 @@ void loop()
 		}
 	}
 	Serial.println("");
+
+	temp_farenheit = temprature_sens_read();
+	temp_celsius = (temp_farenheit - 32) / 1.8;
+	Serial.print("Temp onBoard ");
+	Serial.print(temp_farenheit);
+	Serial.print("°F ");
+	Serial.print(temp_celsius);
+	Serial.println("°C");
 
 	// Wait a bit before scanning again
 	delay(5000);

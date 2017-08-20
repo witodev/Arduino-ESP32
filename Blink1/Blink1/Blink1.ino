@@ -14,7 +14,8 @@
  */
 
 #define LED 2
-#define PAUSE 50
+#define PAUSE_ON 500
+#define PAUSE_OFF 200
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -25,7 +26,7 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(LED, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(PAUSE);              // wait for a second
+  delay(PAUSE_ON);              // wait for a second
   digitalWrite(LED, LOW);    // turn the LED off by making the voltage LOW
-  delay(PAUSE);              // wait for a second
+  delay(PAUSE_OFF);              // wait for a second
 }

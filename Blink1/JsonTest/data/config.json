@@ -1,0 +1,11 @@
+{
+  "ssid": "FunBox2-F197",
+  "password": "E13FE673E25A52323F4EC1444A",
+  "mqtt_user": "pi",
+  "mqtt_pass": "NodeRed",
+  "mqtt_host": "pizero",
+  "ota_host": "raspberrypi",
+  "ota_page": "ota.php?dev=",
+  "php_page": "espaddtemp.php",
+  "php_host": "raspberrypi"
+}

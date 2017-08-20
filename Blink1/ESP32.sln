@@ -7,6 +7,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Blink1", "Blink1\Blink1.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WiFiScan", "WiFiScan\WiFiScan.vcxproj", "{6B866E72-3107-46B5-A33D-7857F75871E1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MorseCode", "..\MorseCode\MorseCode.vcxproj", "{A8C04F9E-FAA6-4819-BDD5-39E012A1A29A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JsonTest", "JsonTest\JsonTest.vcxproj", "{574AB019-47BE-4A39-8356-4B7D941F100C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OLED", "..\OLED\OLED.vcxproj", "{D6A9964F-CF67-4575-8A75-38191C0A1372}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ESP32", "..\ESP32\ESP32.vcxproj", "{9362AA2E-4BC4-4A41-9DFA-8A9DF7CBE78C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicOTA", "..\BasicOTA\BasicOTA.vcxproj", "{44B266B5-F6F6-49DD-954A-7648CCE16B07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -21,6 +31,26 @@ Global
 		{6B866E72-3107-46B5-A33D-7857F75871E1}.Debug|x86.Build.0 = Debug|Win32
 		{6B866E72-3107-46B5-A33D-7857F75871E1}.Release|x86.ActiveCfg = Release|Win32
 		{6B866E72-3107-46B5-A33D-7857F75871E1}.Release|x86.Build.0 = Release|Win32
+		{A8C04F9E-FAA6-4819-BDD5-39E012A1A29A}.Debug|x86.ActiveCfg = Debug|Win32
+		{A8C04F9E-FAA6-4819-BDD5-39E012A1A29A}.Debug|x86.Build.0 = Debug|Win32
+		{A8C04F9E-FAA6-4819-BDD5-39E012A1A29A}.Release|x86.ActiveCfg = Release|Win32
+		{A8C04F9E-FAA6-4819-BDD5-39E012A1A29A}.Release|x86.Build.0 = Release|Win32
+		{574AB019-47BE-4A39-8356-4B7D941F100C}.Debug|x86.ActiveCfg = Debug|Win32
+		{574AB019-47BE-4A39-8356-4B7D941F100C}.Debug|x86.Build.0 = Debug|Win32
+		{574AB019-47BE-4A39-8356-4B7D941F100C}.Release|x86.ActiveCfg = Release|Win32
+		{574AB019-47BE-4A39-8356-4B7D941F100C}.Release|x86.Build.0 = Release|Win32
+		{D6A9964F-CF67-4575-8A75-38191C0A1372}.Debug|x86.ActiveCfg = Debug|Win32
+		{D6A9964F-CF67-4575-8A75-38191C0A1372}.Debug|x86.Build.0 = Debug|Win32
+		{D6A9964F-CF67-4575-8A75-38191C0A1372}.Release|x86.ActiveCfg = Release|Win32
+		{D6A9964F-CF67-4575-8A75-38191C0A1372}.Release|x86.Build.0 = Release|Win32
+		{9362AA2E-4BC4-4A41-9DFA-8A9DF7CBE78C}.Debug|x86.ActiveCfg = Debug|Win32
+		{9362AA2E-4BC4-4A41-9DFA-8A9DF7CBE78C}.Debug|x86.Build.0 = Debug|Win32
+		{9362AA2E-4BC4-4A41-9DFA-8A9DF7CBE78C}.Release|x86.ActiveCfg = Release|Win32
+		{9362AA2E-4BC4-4A41-9DFA-8A9DF7CBE78C}.Release|x86.Build.0 = Release|Win32
+		{44B266B5-F6F6-49DD-954A-7648CCE16B07}.Debug|x86.ActiveCfg = Debug|Win32
+		{44B266B5-F6F6-49DD-954A-7648CCE16B07}.Debug|x86.Build.0 = Debug|Win32
+		{44B266B5-F6F6-49DD-954A-7648CCE16B07}.Release|x86.ActiveCfg = Release|Win32
+		{44B266B5-F6F6-49DD-954A-7648CCE16B07}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
